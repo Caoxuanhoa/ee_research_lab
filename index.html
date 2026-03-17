@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EE Research Lab | Hiệu quả Năng lượng</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800;900&display=swap" rel="stylesheet">
+    
+    <style>
+        /* Định nghĩa màu chuẩn của EE Lab */
+        :root {
+            --ee-green: #40a045; /* Màu lá cây */
+            --ee-blue: #00558a;  /* Màu sóng biển/công nghệ */
+            --ee-dark: #2d3436;
+        }
+        
+        body { font-family: 'Inter', sans-serif; background-color: #f8f9fa; color: #333; margin: 0; padding: 0; }
+
+        /* THANH MENU (NAVBAR) */
+        .navbar { background-color: #ffffff; box-shadow: 0 2px 15px rgba(0,0,0,0.08); padding: 12px 0; }
+        
+        /* Tùy chỉnh Logo Text */
+        .logo-text { font-size: 1.6rem; font-weight: 900; letter-spacing: 0.5px; margin-left: 10px; line-height: 1; }
+        .logo-ee { color: var(--ee-drak); }
+        .logo-lab { color: var(--ee-dark); font-weight: 800; }
+
+        .nav-link { color: var(--ee-dark) !important; font-weight: 600; margin-left: 18px; transition: 0.3s; font-size: 0.95rem;}
+        .nav-link:hover { color: var(--ee-green) !important; transform: translateY(-2px); }
+        
+        .btn-apply-nav { background-color: var(--ee-green); color: white !important; border-radius: 25px; padding: 8px 22px; margin-left: 20px; box-shadow: 0 4px 10px rgba(64, 160, 69, 0.3); }
+        .btn-apply-nav:hover { background-color: #338037; transform: translateY(-2px); box-shadow: 0 6px 15px rgba(64, 160, 69, 0.4); }
+
+        /* MẶT TIỀN (HERO BANNER) */
+        .hero-section {
+            background: linear-gradient(to right, rgba(0, 85, 138, 0.92), rgba(64, 160, 69, 0.75)), url('images/banner.jpg') no-repeat center center;
+            background-size: cover;
+            min-height: 85vh;
+            display: flex;
+            align-items: center;
+            color: white;
+        }
+        .hero-title { font-size: 4.5rem; font-weight: 900; text-transform: uppercase; margin-bottom: 20px; letter-spacing: 1px; line-height: 1.1;}
+        .hero-subtitle { font-size: 1.25rem; font-weight: 400; line-height: 1.6; max-width: 650px; margin-bottom: 35px; opacity: 0.95;}
+        
+        /* Nút Khám phá ngay */
+        .btn-hero { background-color: #ffffff; color: var(--ee-blue); font-weight: 800; padding: 14px 35px; border-radius: 30px; border: none; transition: all 0.3s ease; font-size: 1.1rem; text-transform: uppercase; letter-spacing: 0.5px;}
+        .btn-hero:hover { background-color: var(--ee-green); color: white; box-shadow: 0 10px 25px rgba(64, 160, 69, 0.5); transform: translateY(-4px);}
+    </style>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg sticky-top">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="#">
+                <img src="images/logo1.jpg" alt="EE Lab Logo" style="height: 35px; width: auto; margin-right: 10px;">
+                <span class="logo-text"><span class="logo-ee">EE</span> <span class="logo-lab">RESEARCH LAB</span></span>
+            </a>
+            
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav align-items-center">
+                    <li class="nav-item"><a class="nav-link" href="#about">Về Phòng Nghiên Cứu</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#team">Đội Ngũ</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#research">Hướng Nghiên Cứu</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#publications">Công Bố Khoa Học</a></li>
+                    <li class="nav-item"><a class="nav-link btn-apply-nav" href="#recruit">Tuyển Thành Viên</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <header class="hero-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8">
+                    <h1 class="hero-title">EE Research Lab</h1>
+                    <p class="hero-subtitle">
+                        Môi trường nghiên cứu chuyên sâu về các giải pháp tiết kiệm năng lượng, kiểm toán năng lượng, tích hợp năng lượng tái tạo và tối ưu hóa hệ thống lưới điện hiện đại.
+                    </p>
+                    <a href="#about" class="btn btn-hero mt-2">Khám phá ngay</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+<section id="about" style="padding: 80px 0; background-color: #ffffff;">
+        <div class="container">
+            <div class="row align-items-center">
+                
+                <div class="col-lg-6 mb-4 mb-lg-0">
+                    <h2 style="color: var(--ee-blue); font-weight: 800; font-size: 2.5rem; margin-bottom: 20px;">
+                        Về EE Research Lab
+                    </h2>
+                    <div style="width: 80px; height: 4px; background-color: var(--ee-green); margin-bottom: 30px;"></div>
+                    
+                    <p style="font-size: 1.1rem; color: #555; line-height: 1.7; margin-bottom: 25px;">
+                        Phòng nghiên cứu EE (Energy Efficiency - Hiệu quả Năng lượng) được thành lập với mục tiêu trở thành môi trường nghiên cứu, học tập và thực hành chất lượng cao. Chúng tôi tập trung chuyên sâu vào các giải pháp tiên tiến nhằm giải quyết các bài toán năng lượng trong thực tế.
+                    </p>
+
+                    <ul style="list-style: none; padding-left: 0; font-size: 1.1rem; color: #333;">
+                        <li style="margin-bottom: 15px;">
+                            <span style="color: var(--ee-green); font-weight: bold; margin-right: 10px;">✓</span> Giải pháp tiết kiệm & Kiểm toán năng lượng.
+                        </li>
+                        <li style="margin-bottom: 15px;">
+                            <span style="color: var(--ee-green); font-weight: bold; margin-right: 10px;">✓</span> Tích hợp năng lượng tái tạo vào lưới điện.
+                        </li>
+                        <li style="margin-bottom: 15px;">
+                            <span style="color: var(--ee-green); font-weight: bold; margin-right: 10px;">✓</span> Tối ưu hiệu quả sử dụng năng lượng.
+                        </li>
+                        <li style="margin-bottom: 15px;">
+                            <span style="color: var(--ee-green); font-weight: bold; margin-right: 10px;">✓</span> Điều khiển hệ thống điện và tòa nhà thông minh.
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-6">
+                    <div style="position: relative; padding-left: 30px;">
+                        <img src="images/anh-hop-lab.jpg" alt="Hoạt động tại EE Lab" style="width: 100%; border-radius: 15px; box-shadow: 0 15px 30px rgba(0,0,0,0.1);">
+                        
+                        <div style="position: absolute; top: 20px; left: 10px; width: 100%; height: 100%; border: 3px solid var(--ee-green); border-radius: 15px; z-index: -1;"></div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+<section id="team" style="padding: 80px 0; background-color: #f9f9f9;">
+        <div class="container text-center">
+            
+            <h2 style="color: var(--ee-blue); font-weight: 800; font-size: 2.5rem; margin-bottom: 10px;">Đội Ngũ Nòng Cốt</h2>
+            <div style="width: 60px; height: 4px; background-color: var(--ee-green); margin: 0 auto 50px;"></div>
+
+            <div class="row justify-content-center mb-5">
+                <div class="col-lg-5">
+                    <div style="background: white; padding: 30px; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); border-bottom: 5px solid var(--ee-blue);">
+                        <img src="images/thay-anh.jpg" alt="TS. Hoàng Anh" style="width: 150px; height: 150px; border-radius: 50%; object-fit: cover; margin-bottom: 20px; border: 4px solid #eee;">
+                        <h4 style="color: var(--ee-blue); font-weight: 700;">TS. Hoàng Anh</h4>
+                        <p style="color: var(--ee-green); font-weight: 600; margin-bottom: 10px;">Chủ nhiệm Lab</p>
+                        <p style="font-size: 0.9rem; color: #666; line-height: 1.5;">Bảo vệ luận văn Tiến sĩ tại ĐH Lorraine (Pháp). Chuyên sâu về thiết kế hệ thống điện và tối ưu hóa năng lượng.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row g-4">
+                
+                <div class="col-md-3">
+                    <div style="background: white; padding: 20px; border-radius: 15px; box-shadow: 0 5px 20px rgba(0,0,0,0.05); height: 100%;">
+                        <img src="images/thay-chinh.jpg" alt="TS. Hoàng Đức Chính" style="width: 100px; height: 100px; border-radius: 50%; object-fit: cover; margin-bottom: 15px;">
+                        <h5 style="font-weight: 700; font-size: 1.1rem;">TS. Hoàng Đức Chính</h5>
+                        <p style="font-size: 0.85rem; color: #777;">Tiến sĩ tại NUS (Singapore). Chuyên về lưới điện và tòa nhà thông minh.</p>
+                    </div>
+                </div>
+
+                <div class="col-md-3">
+                    <div style="background: white; padding: 20px; border-radius: 15px; box-shadow: 0 5px 20px rgba(0,0,0,0.05); height: 100%;">
+                        <img src="images/thay-dung.jpg" alt="TS. Phạm Hùng Dũng" style="width: 100px; height: 100px; border-radius: 50%; object-fit: cover; margin-bottom: 15px;">
+                        <h5 style="font-weight: 700; font-size: 1.1rem;">TS. Phạm Hùng Dũng</h5>
+                        <p style="font-size: 0.85rem; color: #777;">Tiến sĩ tại UTS (Úc). Chuyên về vi lưới và năng lượng tái tạo.</p>
+                    </div>
+                </div>
+
+                <div class="col-md-3">
+                    <div style="background: white; padding: 20px; border-radius: 15px; box-shadow: 0 5px 20px rgba(0,0,0,0.05); height: 100%;">
+                        <img src="images/thay-phong.jpg" alt="ThS. Nguyễn Thế Phong" style="width: 100px; height: 100px; border-radius: 50%; object-fit: cover; margin-bottom: 15px;">
+                        <h5 style="font-weight: 700; font-size: 1.1rem;">ThS. Nguyễn Thế Phong</h5>
+                        <p style="font-size: 0.85rem; color: #777;">Thạc sĩ tại ĐH Aalto (Phần Lan). Chuyên về tích hợp năng lượng tái tạo.</p>
+                    </div>
+                </div>
+
+                <div class="col-md-3">
+                    <div style="background: white; padding: 20px; border-radius: 15px; box-shadow: 0 5px 20px rgba(0,0,0,0.05); height: 100%;">
+                        <img src="images/thay-cuong.jpg" alt="KS. Trịnh Văn Cường" style="width: 100px; height: 100px; border-radius: 50%; object-fit: cover; margin-bottom: 15px;">
+                        <h5 style="font-weight: 700; font-size: 1.1rem;">KS. Trịnh Văn Cường</h5>
+                        <p style="font-size: 0.85rem; color: #777;">Kỹ sư ĐHBKHN. Chuyên về mô phỏng hệ thống năng lượng và lưu trữ.</p>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="mt-5">
+                <a href="members.html" class="btn" style="border: 2px solid var(--ee-blue); color: var(--ee-blue); font-weight: 700; padding: 12px 30px; border-radius: 30px; transition: 0.3s;">
+                    Xem toàn bộ thành viên Lab &rarr;
+                </a>
+            </div>
+
+        </div>
+    </section>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    
+    <section id="research" style="padding: 100px 0; background-color: #ffffff;">
+        <div class="container">
+            
+            <div class="text-center mb-5">
+                <h2 style="color: var(--ee-blue); font-weight: 800; font-size: 2.5rem;">Lĩnh Vực Nghiên Cứu Trọng Điểm</h2>
+                <div style="width: 60px; height: 4px; background-color: var(--ee-green); margin: 15px auto;"></div>
+                <p style="color: #777; max-width: 600px; margin: 0 auto;">Chúng tôi tập trung vào những giải pháp công nghệ tiên tiến nhất để tối ưu hóa hệ thống năng lượng toàn cầu.</p>
+            </div>
+
+            <div class="row g-4">
+                
+                <div class="col-lg-3 col-md-6">
+                    <div class="research-card" style="padding: 40px 25px; border-radius: 20px; border: 1px solid #eee; text-align: center; height: 100%; transition: 0.4s; background: #fff;">
+                        <div style="width: 70px; height: 70px; background: rgba(64, 160, 69, 0.1); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 25px;">
+                            <i class="bi bi-lightbulb-fill" style="font-size: 2rem; color: var(--ee-green);"></i>
+                        </div>
+                        <h5 style="font-weight: 700; margin-bottom: 15px; color: var(--ee-blue);">Tiết kiệm & Kiểm toán</h5>
+                        <p style="font-size: 0.9rem; color: #666; line-height: 1.6;">Đo lường, đánh giá và thiết kế lộ trình tối ưu hóa tiêu thụ năng lượng cho doanh nghiệp và tòa nhà.</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+                    <div class="research-card" style="padding: 40px 25px; border-radius: 20px; border: 1px solid #eee; text-align: center; height: 100%; transition: 0.4s; background: #fff;">
+                        <div style="width: 70px; height: 70px; background: rgba(0, 85, 138, 0.1); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 25px;">
+                            <i class="bi bi-sun-fill" style="font-size: 2rem; color: var(--ee-blue);"></i>
+                        </div>
+                        <h5 style="font-weight: 700; margin-bottom: 15px; color: var(--ee-blue);">Năng lượng Tái tạo</h5>
+                        <p style="font-size: 0.9rem; color: #666; line-height: 1.6;">Tích hợp điện mặt trời, điện gió và công nghệ lưu trữ năng lượng hiện đại vào hệ thống lưới điện.</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+                    <div class="research-card" style="padding: 40px 25px; border-radius: 20px; border: 1px solid #eee; text-align: center; height: 100%; transition: 0.4s; background: #fff;">
+                        <div style="width: 70px; height: 70px; background: rgba(64, 160, 69, 0.1); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 25px;">
+                            <i class="bi bi-cpu-fill" style="font-size: 2rem; color: var(--ee-green);"></i>
+                        </div>
+                        <h5 style="font-weight: 700; margin-bottom: 15px; color: var(--ee-blue);">Lưới điện thông minh</h5>
+                        <p style="font-size: 0.9rem; color: #666; line-height: 1.6;">Phát triển Microgrid, mạng cảm biến và quản lý dữ liệu cho các tòa nhà và hệ thống điện thông minh.</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+                    <div class="research-card" style="padding: 40px 25px; border-radius: 20px; border: 1px solid #eee; text-align: center; height: 100%; transition: 0.4s; background: #fff;">
+                        <div style="width: 70px; height: 70px; background: rgba(0, 85, 138, 0.1); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 25px;">
+                            <i class="bi bi-gear-wide-connected" style="font-size: 2rem; color: var(--ee-blue);"></i>
+                        </div>
+                        <h5 style="font-weight: 700; margin-bottom: 15px; color: var(--ee-blue);">Mô phỏng & Điều khiển</h5>
+                        <p style="font-size: 0.9rem; color: #666; line-height: 1.6;">Ứng dụng Hardware-in-the-loop và thuật toán tối ưu để vận hành chính xác các hệ thống điện phức tạp.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <style>
+            .research-card:hover {
+                transform: translateY(-15px);
+                border-color: var(--ee-green) !important;
+                box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            }
+            .research-card:hover i {
+                transform: scale(1.1);
+                transition: 0.3s;
+            }
+        </style>
+    </section>
+
+<section id="publications" style="padding: 100px 0; background-color: #f4f7f6;">
+        <div class="container">
+            
+            <div class="text-center mb-5">
+                <h2 style="color: var(--ee-blue); font-weight: 800; font-size: 2.5rem;">Công Bố Khoa Học</h2>
+                <div style="width: 60px; height: 4px; background-color: var(--ee-green); margin: 15px auto;"></div>
+                <p style="color: #666;">Các công trình nghiên cứu mới nhất của PNC EE được công bố tại hội thảo quốc tế và lưu trữ trên hệ thống IEEE Xplore.</p>
+            </div>
+
+            <div class="row justify-content-center">
+                <div class="col-lg-10">
+                    
+                    <div class="publication-item" style="background: white; border-radius: 15px; padding: 30px; margin-bottom: 25px; box-shadow: 0 5px 15px rgba(0,0,0,0.05); display: flex; align-items: flex-start; border-left: 5px solid var(--ee-green);">
+                        <div style="margin-right: 20px; color: var(--ee-green); font-size: 2rem;">
+                            <i class="bi bi-file-earmark-medical"></i>
+                        </div>
+                        <div>
+                            <span style="font-size: 0.8rem; font-weight: 700; color: #999; text-transform: uppercase;">International Conference | 2025</span>
+                            <h5 style="font-weight: 700; color: var(--ee-blue); margin: 10px 0;">An Iterative Learning Control Mechanism for the STATCOM to Stabilize Voltage in Distribution Networks</h5>
+                            <p style="font-size: 0.9rem; color: #555; margin-bottom: 10px;"><b>Authors:</b> Trung Thanh Cao, Cuong Trinh Van, The Phong Nguyen, Ha Thu Nguyen, Lan Anh Dinh Thi, Anh Hoang.</p>
+                            <p style="font-size: 0.85rem; color: #777; font-style: italic;">The 10th International Conference on Applying New Technology in Green Buildings (ATiGB 2025), Da Nang.</p>
+                            <a href="https://ieeexplore.ieee.org/document/11142242/" target="_blank" class="btn btn-sm" style="background-color: var(--ee-blue); color: white; border-radius: 5px; margin-top: 10px;">View on IEEE Xplore</a>
+                        </div>
+                    </div>
+
+                    <div class="publication-item" style="background: white; border-radius: 15px; padding: 30px; margin-bottom: 25px; box-shadow: 0 5px 15px rgba(0,0,0,0.05); display: flex; align-items: flex-start; border-left: 5px solid var(--ee-blue);">
+                        <div style="margin-right: 20px; color: var(--ee-blue); font-size: 2rem;">
+                            <i class="bi bi-file-earmark-medical"></i>
+                        </div>
+                        <div>
+                            <span style="font-size: 0.8rem; font-weight: 700; color: #999; text-transform: uppercase;">International Conference | 2025</span>
+                            <h5 style="font-weight: 700; color: var(--ee-blue); margin: 10px 0;">Optimization and Techno-Economic Analysis of an On-Grid Hybrid Energy System for Electrification using Solar, Biogas, and BESS via HOMER Pro</h5>
+                            <p style="font-size: 0.9rem; color: #555; margin-bottom: 10px;"><b>Authors:</b> The Phong Nguyen, Quang Huy Nguyen, Anh Hoang, Trung Thanh Cao, Hoai Nam Nguyen, Van Cuong Trinh.</p>
+                            <p style="font-size: 0.85rem; color: #777; font-style: italic;">The 10th International Conference on Applying New Technology in Green Buildings (ATiGB 2025), Da Nang.</p>
+                            <a href="https://ieeexplore.ieee.org/document/11142187" target="_blank" class="btn btn-sm" style="background-color: var(--ee-blue); color: white; border-radius: 5px; margin-top: 10px;">View on IEEE Xplore</a>
+                        </div>
+                    </div>
+
+                    <div class="publication-item" style="background: white; border-radius: 15px; padding: 30px; box-shadow: 0 5px 15px rgba(0,0,0,0.05); display: flex; align-items: flex-start; border-left: 5px solid var(--ee-green);">
+                        <div style="margin-right: 20px; color: var(--ee-green); font-size: 2rem;">
+                            <i class="bi bi-file-earmark-medical"></i>
+                        </div>
+                        <div>
+                            <span style="font-size: 0.8rem; font-weight: 700; color: #999; text-transform: uppercase;">International Conference | 2025</span>
+                            <h5 style="font-weight: 700; color: var(--ee-blue); margin: 10px 0;">Towards Green Mobility: A Scenario for a Renewable and Storage-integrated EV Charging Station in Vietnam</h5>
+                            <p style="font-size: 0.9rem; color: #555; margin-bottom: 10px;"><b>Authors:</b> The Phong Nguyen, Anh Hoang, Thi Kim Huong Pham, Quang Hung Nguyen, Hoang Hiep Nguyen, Nhat Giang Hoang, Thanh An Nguyen, Khanh Vinh Hoang.</p>
+                            <p style="font-size: 0.85rem; color: #777; font-style: italic;">The 10th International Conference on Applying New Technology in Green Buildings (ATiGB 2025), Da Nang.</p>
+                            <a href="https://ieeexplore.ieee.org/document/11142134" target="_blank" class="btn btn-sm" style="background-color: var(--ee-blue); color: white; border-radius: 5px; margin-top: 10px;">View on IEEE Xplore</a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        
+        <style>
+            .publication-item { transition: 0.3s; }
+            .publication-item:hover { transform: scale(1.02); box-shadow: 0 10px 25px rgba(0,0,0,0.1); }
+        </style>
+    </section>
+
+
+<section id="recruit" style="padding: 100px 0; background-color: #f8f9fa;">
+        <div class="container">
+            <div style="background: white; border-radius: 30px; padding: 50px; box-shadow: 0 20px 50px rgba(0,0,0,0.05); border: 1px solid #e0e0e0;">
+                
+                <div class="text-center mb-5">
+                    <span style="background: var(--ee-green); color: white; padding: 5px 15px; border-radius: 20px; font-size: 0.8rem; font-weight: 700; text-transform: uppercase;">Recruitment</span>
+                    <h2 style="color: var(--ee-blue); font-weight: 800; font-size: 2.5rem; margin-top: 15px;">Tuyển Thành Viên Lab</h2>
+                </div>
+
+                <div class="row g-5">
+                    <div class="col-lg-4">
+                        <div style="background: #fff9f0; padding: 25px; border-radius: 20px; border-left: 5px solid #f39c12; height: 100%;">
+                            <h5 style="font-weight: 700; color: #d35400; margin-bottom: 20px;"><i class="bi bi-exclamation-triangle-fill me-2"></i> Yêu cầu ứng viên</h5>
+                            <ul style="list-style: none; padding-left: 0; color: #555; font-size: 0.95rem; line-height: 1.8;">
+                                <li><i class="bi bi-chevron-right me-1" style="color: #f39c12;"></i> CPA tối thiểu <b>2.5</b> (Toán học là lợi thế).</li>
+                                <li><i class="bi bi-chevron-right me-1" style="color: #f39c12;"></i> Đọc hiểu tài liệu chuyên ngành tiếng Anh.</li>
+                                <li><i class="bi bi-chevron-right me-1" style="color: #f39c12;"></i> Tiếng Anh từ <b>5.5 IELTS</b> trở lên.</li>
+                                <li><i class="bi bi-chevron-right me-1" style="color: #f39c12;"></i> Chăm chỉ, có tinh thần cầu tiến.</li>
+                                <li><i class="bi bi-chevron-right me-1" style="color: #f39c12;"></i> Cam kết nghiêm túc học tập & nghiên cứu.</li>
+                                <li><i class="bi bi-chevron-right me-1" style="color: #f39c12;"></i> Có kế hoạch phát triển bản thân rõ ràng.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4">
+                        <div style="background: #f0f7f1; padding: 25px; border-radius: 20px; border-left: 5px solid var(--ee-green); height: 100%;">
+                            <h5 style="font-weight: 700; color: var(--ee-green); margin-bottom: 20px;"><i class="bi bi-gift-fill me-2"></i> Quyền lợi nhận được</h5>
+                            <ul style="list-style: none; padding-left: 0; color: #555; font-size: 0.95rem; line-height: 1.8;">
+                                <li><i class="bi bi-check-lg me-1" style="color: var(--ee-green);"></i> Làm việc cùng các TS. tại nước ngoài về.</li>
+                                <li><i class="bi bi-check-lg me-1" style="color: var(--ee-green);"></i> Hướng dẫn viết bài báo khoa học (ISI/Scopus).</li>
+
+                                <li><i class="bi bi-check-lg me-1" style="color: var(--ee-green);"></i> Sử dụng cơ sở vật chất, thiết bị hiện đại.</li>
+                                <li><i class="bi bi-check-lg me-1" style="color: var(--ee-green);"></i> Rèn luyện tác phong làm việc chuyên nghiệp.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 text-center">
+                        <div style="border: 2px dashed #ddd; padding: 20px; border-radius: 20px;">
+                            <p style="font-weight: 700; color: var(--ee-blue); margin-bottom: 15px;">ĐĂNG KÝ NGAY</p>
+                            <img src="images/qr-code.jpg" alt="Mã QR" style="width: 160px; height: 160px; border-radius: 10px; margin-bottom: 20px; box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
+                            <a href="#" class="btn" style="background: var(--ee-blue); color: white; width: 100%; border-radius: 25px; font-weight: 600; padding: 10px 0;">Ứng tuyển Online</a>
+                            <p style="font-size: 0.75rem; color: #999; margin-top: 15px;">Liên hệ: ThS. Nguyễn Thế Phong để biết thêm chi tiết.</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+<footer style="background-color: #1a1a1a; color: #ffffff; padding: 60px 0 20px;">
+        <div class="container">
+            <div class="row g-4">
+                
+                <div class="col-lg-4">
+                    <h5 style="color: var(--ee-green); font-weight: 800; margin-bottom: 20px;">EE RESEARCH LAB</h5>
+                    <p style="font-size: 0.9rem; opacity: 0.8; line-height: 1.6;">
+                        Phòng nghiên cứu Hiệu quả Năng lượng - Đại học Bách Khoa Hà Nội. 
+                        Nơi khơi nguồn những ý tưởng sáng tạo và giải pháp tối ưu cho hệ thống năng lượng bền vững.
+                    </p>
+                </div>
+
+                <div class="col-lg-2 offset-lg-1">
+                    <h5 style="font-weight: 700; margin-bottom: 20px;">Khám phá</h5>
+                    <ul style="list-style: none; padding: 0; font-size: 0.9rem;">
+                        <li style="margin-bottom: 10px;"><a href="#about" style="color: #bbb; text-decoration: none;">Về Lab</a></li>
+                        <li style="margin-bottom: 10px;"><a href="#team" style="color: #bbb; text-decoration: none;">Đội ngũ</a></li>
+                        <li style="margin-bottom: 10px;"><a href="#research" style="color: #bbb; text-decoration: none;">Nghiên cứu</a></li>
+                        <li style="margin-bottom: 10px;"><a href="#recruit" style="color: #bbb; text-decoration: none;">Tuyển thành viên</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-5">
+                    <h5 style="font-weight: 700; margin-bottom: 20px;">Liên hệ</h5>
+                    <p style="font-size: 0.9rem; opacity: 0.8; margin-bottom: 10px;">
+                        <i class="bi bi-geo-alt-fill" style="color: var(--ee-green); margin-right: 10px;"></i>
+                        Phòng C7-E405, Đại học Bách Khoa Hà Nội
+                    </p>
+                    <p style="font-size: 0.9rem; opacity: 0.8; margin-bottom: 10px;">
+                        <i class="bi bi-envelope-fill" style="color: var(--ee-green); margin-right: 10px;"></i>
+                        phong.nguyenthe@hust.edu.vn (ThS. Nguyễn Thế Phong)
+                    </p>
+                    <p style="font-size: 0.9rem; opacity: 0.8;">
+                        <i class="bi bi-telephone-fill" style="color: var(--ee-green); margin-right: 10px;"></i>
+                        0987.232.445
+                    </p>
+                </div>
+
+            </div>
+
+            <hr style="border-color: rgba(255,255,255,0.1); margin: 40px 0 20px;">
+
+            <div class="row align-items-center">
+                <div class="col-md-6 text-center text-md-start">
+                    <p style="font-size: 0.8rem; opacity: 0.6; margin: 0;">
+                        © 2026 EE Research Lab. All rights reserved.
+                    </p>
+                </div>
+                <div class="col-md-6 text-center text-md-end">
+                    <p style="font-size: 0.85rem; margin: 0; font-weight: 500; color: #fff;">
+                        Designed with by 
+                        <span style="color: var(--ee-green); font-weight: 700; border-bottom: 1px solid var(--ee-green);">Cao Xuân Hoá</span>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+ 
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
